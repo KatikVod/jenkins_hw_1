@@ -34,12 +34,12 @@ public class TestBase {
 
     @AfterEach
     void afterEach() {
-        Selenide.closeWebDriver();
-
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+
+        Selenide.closeWebDriver();
     }
 
     @BeforeEach
