@@ -1,14 +1,23 @@
 package tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.PracticeFormPage;
+
 import static io.qameta.allure.Allure.step;
+
+@Owner("evodolazhskaia")
+@Feature("Заполнение формы регистрации")
 
 public class PracticeFormTests extends TestBase {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
     @Test
+    @Tags({@Tag("regress"), @Tag("major")})
     @DisplayName("Регистрация с заполнением всех полей формы")
     void fillAllFieldsTest() {
 
@@ -48,6 +57,7 @@ public class PracticeFormTests extends TestBase {
     }
 
     @Test
+    @Tags({@Tag("smoke"), @Tag("critical")})
     @DisplayName("Регистрация с заполнением только обязательных полей формы")
     void fillOnlyRequiredFieldsTest() {
 
@@ -74,6 +84,7 @@ public class PracticeFormTests extends TestBase {
     }
 
     @Test
+    @Tags({@Tag("smoke"), @Tag("critical")})
     @DisplayName("Регистрация с незаполненным обязательным полем email")
     void emptyFirstNameTest() {
 
