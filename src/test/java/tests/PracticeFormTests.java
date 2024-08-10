@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -11,13 +12,14 @@ import pages.PracticeFormPage;
 import static io.qameta.allure.Allure.step;
 
 @Owner("evodolazhskaia")
-@Feature("Заполнение формы регистрации")
-
+@DisplayName("Заполнение формы регистрации")
+@Feature("Регистрация")
 public class PracticeFormTests extends TestBase {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
 
     @Test
     @Tags({@Tag("regress"), @Tag("major")})
+    @Story("Story1")
     @DisplayName("Регистрация с заполнением всех полей формы")
     void fillAllFieldsTest() {
 
