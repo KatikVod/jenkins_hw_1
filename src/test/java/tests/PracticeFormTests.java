@@ -1,6 +1,7 @@
 package tests;
 
 import io.qameta.allure.Feature;
+import io.qameta.allure.Issue;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +14,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("evodolazhskaia")
 @DisplayName("Заполнение формы регистрации")
+@Issue("HOMEWORK-1313")
 @Feature("Регистрация")
 public class PracticeFormTests extends TestBase {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
