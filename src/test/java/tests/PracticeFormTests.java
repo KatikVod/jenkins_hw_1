@@ -19,7 +19,6 @@ public class PracticeFormTests extends TestBase {
 
     @Test
     @Tags({@Tag("regress"), @Tag("major")})
-    @Story("Story1")
     @DisplayName("Регистрация с заполнением всех полей формы")
     void fillAllFieldsTest() {
 
